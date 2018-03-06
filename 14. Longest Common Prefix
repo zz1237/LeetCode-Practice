@@ -1,0 +1,27 @@
+#Question:
+Write a function to find the longest common prefix string amongst an array of strings.
+
+
+#Solution:
+class Solution:
+    def longestCommonPrefix(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: str
+        """
+        if not strs:
+            return ""
+        
+        min_str = min(strs, key=len)
+        
+        for i, val in enumerate(min_str):
+            for other in strs:
+                if other[i]!=val:
+                    return min_str[:i]
+        
+        return min_str
+
+
+#Note:
+1. return in a function: even if there is an error after, as long as the first return can be implemented, it will run;
+2. use of enumerate()
