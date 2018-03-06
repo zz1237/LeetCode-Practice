@@ -30,3 +30,7 @@ class Solution(object):
             if target - num in lookup:
                 return [lookup[target - num], i]
             lookup[num] = i
+
+
+#Note:
+1. use of enumerate(): remove one layer of for loop
