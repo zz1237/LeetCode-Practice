@@ -17,4 +17,7 @@ class Solution(object):
         else:
             return a
 
-*Note: cmp() is available in Python 2.
+*Note: 
+1. cmp() is available in Python 2;
+2. use abs() to reduce redundancy;
+3. understand the overflows (although it's not an issue in Python).
