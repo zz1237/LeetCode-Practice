@@ -30,3 +30,8 @@ class Solution:
         a += RomanValues[s[-1]] #the for loop does not consider the last value
                 
         return a   
+
+
+#Note:
+1. Key is to compare the current one with the next one;
+2. Last letter should be captured separately.
