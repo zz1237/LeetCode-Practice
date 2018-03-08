@@ -1,0 +1,37 @@
+#Question:
+Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
+
+
+
+#Solution:
+class Solution:
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        characters = []
+        
+        for char in s:
+            if (char == "(") or (char == "[") or (char == "{"):
+                characters.append(char)
+            if (char == ")"):
+                if (characters == []) or (characters.pop() != "("):
+                    return False
+            if (char == "]"):
+                if (characters == []) or (characters.pop() != "["):
+                    return False
+            if (char == "}"):
+                if (characters == []) or (characters.pop() != "{"):
+                    return False
+     
+        if characters==[]:
+            return True
+        else:
+            return False
+   
+   
+#Note:
+1. There is at least one pair of parenthesis staying ext to each other;
+2. Use of list.pop() to capture the above feature and remove the last letter from the list.
