@@ -35,3 +35,19 @@ class Solution:
 #Note:
 1. There is at least one pair of parenthesis staying ext to each other;
 2. Use of list.pop() to capture the above feature and remove the last letter from the list.
+
+
+#Another Solution:
+class Solution:
+    def isValid(self, s):
+        if len(s)%2==1:
+            return False
+        else:
+            while ('()' in s) or ('[]' in s) or ('{}' in s):
+                s = s.replace('()','').replace('[]','').replace('{}','')
+            return (s=='')
+
+
+#Note:
+1. There is at least one pair of parenthesis staying ext to each other;
+2. Use of list.replace() to remove the next-to-next parenthesis and create new next-to-next pair.
