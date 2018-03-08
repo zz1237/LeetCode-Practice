@@ -37,7 +37,7 @@ class Solution:
 2. Use of list.pop() to capture the above feature and remove the last letter from the list.
 
 
-#Another Solution:
+#Another Solution (slower but more concise:
 class Solution:
     def isValid(self, s):
         if len(s)%2==1:
